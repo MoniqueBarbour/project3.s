@@ -137,6 +137,7 @@ SubprogramB:
 	
 	addi $t4,$t4,1	# moves to the next element in the array
 	j SubprogramC 
+# stores the converted number 
 continue:
 	
 	sw $s1,0($sp)	#stores the converted number
