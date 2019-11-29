@@ -175,6 +175,7 @@ exp:
 	#raises my base to a certain exponent by muliplying itself repeatly
 	ble $t8, 1, combine	#if the exponet is 1 there is no need to multiply the base by itself
 	mul $t9, $t9, 30 	# multpling my base by itself to simulate raising the number to a power
+# decreasing the exponent 
 	addi $t8, $t8, -1	# decreasing the exponent
 	j exp
 combine:
