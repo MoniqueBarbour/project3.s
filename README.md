@@ -184,7 +184,7 @@ combine:
 	add $s1,$s1,$s2		# adding the coverted numbers together 
 	j continue
 
-
+# jumps back to substring 
 
 	
 finish : jr $ra	#jumps back to substring
