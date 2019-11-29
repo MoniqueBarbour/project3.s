@@ -67,3 +67,20 @@ check:
 gap:
 	addi $t2,$t2,-1 #keeps track of spaces/tabs
 	j loop
+
+vaild:
+	addi $t3, $t3,1 #keeps track of how many valid characters are in the substring
+	mul $t2,$t2,$t7 
+# jumps to the beginning of loop
+	j loop #jumps to the beginning of loop	
+
+invalidloop:
+	
+	lb $s0, ($t0) # loads the bit that $t0 is pointing to
+	beq $s0, 0, insubstring# check if the bit is null
+	beq $s0, 10, insubstring #checks if the bit is a new line 	
+	addi $t0,$t0,1 #move the $t0 to the next element of the array	
+	beq $s0, 44, insubstring #check if bit is a comma
+	
+	
+	j invalidloop #jumps to the beginning of loop
