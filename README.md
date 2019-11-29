@@ -50,11 +50,12 @@ loop:
 	beq $s0, 44, substring #check if bit is a comma
 # checks to see if there were any spaces or tabs in between valid chars
 check:
-	bgt $t2,0,invalidloop #checks to see if there were any spaces or tabs in between valid characters
+	bgt $t2,0,invalidloop 
 	beq $s0, 9,  gap #checks to see if there is a tab characters
 	beq $s0, 32, gap #checks to see if there is a space character
 	ble $s0, 47, invalidloop # checks to see if the ascii less than 48
 	ble $s0, 57, vaild # checks to see if the ascii less than 57(integers)
+# checks to see if ascii less than 64
 	ble $s0, 64, invalidloop # checks to see if the ascii less than 64
 	ble $s0, 82, vaild	# checks to see if the ascii less than 84(capital letters)
 	ble $s0, 96, invalidloop # checks to see if the ascii less than 96
