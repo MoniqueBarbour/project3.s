@@ -62,7 +62,7 @@ check:
 	ble $s0, 114, vaild 	# checks to see if the ascii less than 116(lowercase letters)
 	bge $s0, 114, invalidloop # checks to see if the ascii greater than 114
 
-
+# keeps track of spaces/tabs
 
 gap:
 	addi $t2,$t2,-1 #keeps track of spaces/tabs
