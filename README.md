@@ -11,4 +11,14 @@ main :
 	la $a0,data	
 	li $a1, 1001	
 	syscall
-	
+# jumps to label 
+jal SubprogramA 
+continue1:
+	j print 
+SubprogramA:
+# creates spaces in the stack
+	sub $sp, $sp,4 #creates spaces in the stack
+	sw $a0, 0($sp) #stores input into the stack
+	lw $t0, 0($sp) # stores the input into $t0
+	addi $sp,$sp,4 # moves the stack pointer up
+	move $t6, $t0 # stores the begining of the input into $t6
