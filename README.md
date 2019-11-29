@@ -201,7 +201,7 @@ done:
 	sub $t1, $t1,4	#keeping track of amount of elements left
 	sub $sp,$sp,4 #moving the stack pointer to the next element
 
-		
+# storing that element into $s7
 	lw $s7, 0($sp)	#storing that element into $s7
 	
 	beq $s7,-1,invalidprint #checks to see if element is invalid
@@ -210,6 +210,7 @@ done:
 	li $v0, 1
 	lw $a0, 0($sp) #prints element
 	syscall
+# if there are elements left terminate program 
 com:
 	beq $t1, 0,Exit #if there are now elements left it terminates the program
 	li $v0, 4
