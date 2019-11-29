@@ -121,6 +121,7 @@ next:
 	jal SubprogramB
 	lb $s0, ($t0) # loads the bit that $t0 is pointing to
 	beq $s0, 0, continue1 # check if the bit is null
+# checks if the bit is a new line 
 	beq $s0, 10, continue1 #checks if the bit is a new line 
 	beq $s0,44, invalidloop #checks if the next bit is a comma
 	li $t2,0 #resets my space/tabs checker back to zero
