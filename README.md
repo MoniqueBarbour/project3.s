@@ -31,7 +31,6 @@ start:
 	beq $s0, 10, insubstring #checks if the bit is a new line 
 # check if bit is a comma 
 	beq $s0, 44, invalidloop #check if bit is a comma
-
 	beq $s0, 9, skip # checks if the bit is a tabs character 
 	beq $s0, 32, skip #checks if the bit is a space character
 	move $t6, $t0 #store the first non-space/tab character
