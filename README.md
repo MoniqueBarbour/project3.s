@@ -115,6 +115,7 @@ next:
 	sub $sp, $sp,4 # creates space in the stack
 	sw $t6, 0($sp) #stores what was in $t6 into the stack
 	move $t6,$t0  # store the pointer to the bit after the comma
+# loads what was in the stack 
 	lw $t4,0($sp) #loads what was in the stack at that posistion into $t4
 	li $s1,0 #sets $s1 to 0 
 	jal SubprogramB
