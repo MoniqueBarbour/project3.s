@@ -78,7 +78,8 @@ invalidloop:
 	
 	lb $s0, ($t0) # loads the bit that $t0 is pointing to
 	beq $s0, 0, insubstring# check if the bit is null
-	beq $s0, 10, insubstring #checks if the bit is a new line 	
+	beq $s0, 10, insubstring #checks if the bit is a new line 
+# move the $t0 to next element 
 	addi $t0,$t0,1 #move the $t0 to the next element of the array	
 	beq $s0, 44, insubstring #check if bit is a comma
 	
