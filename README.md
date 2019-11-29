@@ -103,7 +103,7 @@ insubstring:
 	j start
 
 
-
+# checks if there is a space 
 
 substring:
 	mul $t2,$t2,$t7 #if there was a space before a this valid character it will change $t2 to a positive number
