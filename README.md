@@ -129,7 +129,7 @@ next:
 
 
 
-
+# check how many chars left 
 SubprogramB:
 	beq $t3,0,finish #check how many charcter are left to convert 
 	addi $t3,$t3,-1 #decreases the amount of charaters left to convert
