@@ -94,6 +94,7 @@ insubstring:
 	
 	move $t6,$t0  # store the pointer to the bit after the comma
 	lb $s0, ($t0) # loads the bit that $t0 is pointing to
+# check if the bit is null
 	beq $s0, 0, continue1# check if the bit is null
 	beq $s0, 10, continue1 #checks if the bit is a new line 
 	beq $s0,44, invalidloop #checks if the next bit is a comma
