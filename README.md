@@ -153,6 +153,7 @@ SubprogramC:
 num:
 	
 	sub $s0, $s0, 48	#converts interger bits 
+# if no chars left exponent is zero
 	beq $t3, 0, combine	# if there are no charaters left that mean the exponent is zero
 	li $t9, 30		
 	j exp
