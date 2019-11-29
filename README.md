@@ -218,7 +218,7 @@ com:
 	syscall
 	j done
 invalidprint:
-	
+# prints a nonvalid input
 	li $v0, 4
 	
 	la $a0, notvalid #prints a nonvaild input
