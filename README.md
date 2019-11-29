@@ -146,6 +146,7 @@ continue:
 SubprogramC:
 	move $t8, $t3	#stores the amount of characters left to use as an exponent
 	li $t9, 1	# $t9 represents 30 to a certian power and set equal to 1
+# sorts the bit to the appropraite function
 	ble $s0, 57, num #sorts the bit to the apporiate function
 	ble $s0, 82, upper
 	ble $s0, 114, lower
