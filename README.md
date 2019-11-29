@@ -44,6 +44,7 @@ loop:
 	
 	lb $s0, ($t0) # loads the bit that $t0 is pointing to
 	beq $s0, 0,next# check if the bit is null
+# checks if the bit is a new line 
 	beq $s0, 10, next #checks if the bit is a new line 	
 	addi $t0,$t0,1 #move the $t0 to the next element of the array	
 	beq $s0, 44, substring #check if bit is a comma
